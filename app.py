@@ -12,10 +12,23 @@ def home_page():
 @app.route("/store_page")
 def store_page():
 	return render_template("store.html")
+def catalog(x):
+	if x==1:
+		pass
+	elif x==2:
+		pass
+	elif x==3:
+		pass
+	else:
+		pass
 
 @app.route("/cart_page")
-def store_page():
+def cart_page():
 	return render_template("cart.html")
+
+@app.route("/about_page")
+def about_page():
+	return render_template("about.html")
 
 
 if __name__ == '__main__':

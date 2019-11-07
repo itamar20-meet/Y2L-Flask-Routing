@@ -1,31 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<title>store!!!!</title>
 </head>
 <body>
+  <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li><a href={{url_for('home_page')}}>Home</a></li>
+      <li class="active"><a href={{url_for('store_page')}}>Store</a></li>
+      <li><a href={{url_for('about_page')}}>About</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
 	<div class="card">
   		<img src="https://amp.businessinsider.com/images/5849956cba6eb61b008b8256-750-562.jpg" alt="Denim Jeans" style="width:20%">
   		<h1>Pot</h1>
   		<p class="price">$19.99</p>
   		<p>The good stuff</p>
-  		<p><button>Add to Cart</button></p>
+  		<p><a href={{url_for('cart_page')}}  class="btn btn-default">Add to cart</a></p>
 </div>
-<div class="card">
-  		<img src="https://peopledotcom.files.wordpress.com/2019/04/mars-wrigley-candy-internship.jpg" alt="Denim Jeans" style="width:20%">
-  		<h1>Eminem</h1>
-  		<p class="price">$9.99</p>
-  		<p>For munchies</p>
-  		<p><button>Add to Cart</button></p>
-</div>
-<div class="card">
-  		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQhaZEnJygfW2L6EhF-CcKND2jEZntWiAu4vay4IPBqYnCbUqta" alt="Katana" style="width:20%">
-  		<h1>Katana</h1>
-  		<p class="price">$299.99</p>
-  		<p>For after munchies</p>
-  		<p><button>Add to Cart</button></p>
-</div>
-	<a href="localhost:5000/"> Back to home </a>
+
+	<div> for more items     1       2      3      </div>
+
 
 </body>
 </html>
