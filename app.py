@@ -16,7 +16,7 @@ def store_page():
 	if request.method == 'GET' :
 		return render_template("store.html")
 	else:
-		#choose(x)
+		choose(x)
 		add_to_cart(product_id)
 		return render_template("store.html")
 
