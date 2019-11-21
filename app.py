@@ -1,5 +1,7 @@
 from flask import Flask, request, redirect, url_for, render_template
 from flask import session as login_session
+from model import Cart, Product
+from databases import *
 
 app = Flask(__name__)
 app.secret_key = "MY_SUPER_SECRET_KEY"
@@ -9,30 +11,18 @@ app.secret_key = "MY_SUPER_SECRET_KEY"
 def home_page():
 	return render_template("home.html")
 
-@app.route("/store_page")
+@app.route("/store_page", methods=['GET', 'POST'])
 def store_page():
-	return render_template("store.html")
-def choose(x):
-	if x==1:
-		Picture_Link="https://amp.businessinsider.com/images/5849956cba6eb61b008b8256-750-562.jpg"
-		price=19.99
-		name="pot"
-		descroption="The good stuff"
-	elif x==2:
-		Picture_Link=""
-		price=9.99
-		name="Eminem"
-		descroption="For munchies"
-	elif x==3:
-		Picture_Link=""
-		price=199.99
-		name="Katana"
-		descroption="For after munchies"
+	if request.method == 'GET' :
+		return render_template("store.html")
 	else:
-		pass
+		#choose(x)
+		add_to_cart(product_id)
+		return render_template("store.html")
 
 @app.route("/cart_page")
 def cart_page():
+
 	return render_template("cart.html")
 
 @app.route("/about_page")

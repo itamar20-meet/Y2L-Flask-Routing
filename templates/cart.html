@@ -1,14 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<title>cart</title>
 </head>
 <body>
+	<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href={{url_for('home_page')}}>Home</a></li>
+      <li><a href={{url_for('store_page')}}>Store</a></li>
+      <li><a href={{url_for('cart_page')}}>Cart</a></li>
+      <li><a href={{url_for('about_page')}}>About</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
 
-<!-- Delete this section when you reach this file -->
-<h1 style="font-size: 55px;position: absolute;left: 41.5%;top:28%">Cart Function</h1>
-<h1 style="font-size: 70px;position: absolute;left: 40%;bottom:50%">Coming Soon</h1>
-<!-- ------------------ -->
+
+<form action="/cart_page" method="GET">
+	<img src={{Picture_Link}} style="width:20%">
+  		<h1>{{name}}</h1>
+  		<p class="price">{{price}}$</p>
+  		<p>{{description}}</p>
+</form>
+
+
+<button>pay now</button>
 
 </body>
 </html>

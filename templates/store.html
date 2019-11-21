@@ -14,6 +14,7 @@
     <ul class="nav navbar-nav">
       <li><a href={{url_for('home_page')}}>Home</a></li>
       <li class="active"><a href={{url_for('store_page')}}>Store</a></li>
+      <li><a href={{url_for('cart_page')}}>Cart</a></li>
       <li><a href={{url_for('about_page')}}>About</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
@@ -23,15 +24,17 @@
   </div>
 </nav>
 	<div class="card">
-  		<img src={{choose.Picture_Link}} style="width:20%">
-  		<h1>{{choose.name}}</h1>
-  		<p class="price">{{choose.price}}$</p>
-  		<p>{{choose.description}}</p>
-  		<p><a href={{url_for('cart_page')}}  class="btn btn-default">Add to cart</a></p>
+    <form action='/store_page' method='POST', "GET">
+  		<img src={{Picture_Link}} style="width:20%">
+  		<h1>{{name}}</h1>
+  		<p class="price">{{price}}$</p>
+  		<p>{{description}}</p>
+      <input type="submit" value ="add to cart">
+    </form>
 </div>
 
 	<div> 
-  <form action='' method='post'>
+  <form action='/store_page' method='post'>
   <button name='submit' value='1'>1</button>
   <button name='submit' value='2'>2</button>
   <button name='submit' value='3'>3</button>

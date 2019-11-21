@@ -9,8 +9,8 @@ class Product(Base):
    id = Column(Integer, primary_key=True)
    name = Column(String)
    Price = Column(Float)
-   Picture Link = Column(string)
-   Description = Column(string)
+   Picture_Link = Column(String)
+   Description = Column(String)
 
 class Cart(Base):
    __tablename__ = 'Cart'
