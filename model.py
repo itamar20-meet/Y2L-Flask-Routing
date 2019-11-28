@@ -11,6 +11,7 @@ class Product(Base):
    Price = Column(Float)
    Picture_Link = Column(String)
    Description = Column(String)
+		
 
 class Cart(Base):
    __tablename__ = 'Cart'

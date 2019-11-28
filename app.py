@@ -16,10 +16,8 @@ def store_page():
 	if request.method == 'GET' :
 		return render_template("store.html")
 	else:
-		choose(x)
-		add_to_cart(product_id)
+		Product=add_product("https://images-na.ssl-images-amazon.com/images/I/31%2BSnEw8mjL._SX425_.jpg","katana",199.99,"a f*cking katana")
 		return render_template("store.html")
-
 @app.route("/cart_page")
 def cart_page():
 
