@@ -19,6 +19,7 @@ def add_product( Picture_Link,name, Price, Description):
         Description=Description)
     session.add(product_object)
     session.commit()
+    return product_object
 
 def delete_product(their_id):
    session.query(Product).filter_by(
@@ -34,15 +35,16 @@ def query_all():
 
 def query_by_id(their_id):
    products = session.query(
-       Student).filter_by(
+       Product).filter_by(
        id=their_id)
    return products
 
-def add_to_cart(product_id):
+def add_to_cart(Id):
     cart_object = Product(
-        product_id=product_id)
+      Id=Id)
     session.add(cart_object)
     session.commit()
 
 
 
+Product1=add_product("https://images-na.ssl-images-amazon.com/images/I/31%2BSnEw8mjL._SX425_.jpg","katana",199.99,"a f*cking katana")

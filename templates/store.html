@@ -14,34 +14,27 @@
     <ul class="nav navbar-nav">
       <li><a href={{url_for('home_page')}}>Home</a></li>
       <li class="active"><a href={{url_for('store_page')}}>Store</a></li>
-      <li><a href={{url_for('cart_page')}}>Cart</a></li>
       <li><a href={{url_for('about_page')}}>About</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      <li><a href="{{url_for('login_page')}}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
     </ul>
   </div>
 </nav>
    <div>
-    <form action="/store_page" method="POST","GET">
-      <img src={{Product.Picture_Link}} style="width:20%">
-      <h1>{{render_field(Product.name)}}</h1>
-      <p>{{Product.Price}}$</p>
-      <p>{{Product.Description}}</p>
+    <form action="/store_page" method="POST">
+      <img src={{p}} style="width:20%">
+      <h1>{{n}}</h1>
+      <p>{{pr}}$</p>
+      <p>{{d}}</p>
       <input type="submit" value="Add to cart"></input>
     </form>
   </div>
-
-   </div>
-
-	<div> 
-  <form action='/store_page' method='post'>
-  <button name='submit' value='1=x'>1</button>
-  <button name='submit' value='2=x'>2</button>
-  <button name='submit' value='3=x'>3</button>
-  </form>
   </div>
+ </body>
+ </html>
+ 
 
 
 
