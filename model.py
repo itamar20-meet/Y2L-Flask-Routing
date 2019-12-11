@@ -15,5 +15,5 @@ class Product(Base):
 
 class Cart(Base):
    __tablename__ = 'Cart'
-   id = Column(Integer, primary_key=True)
+   Id = Column(Integer, primary_key=True)
    product_id = Column(String)

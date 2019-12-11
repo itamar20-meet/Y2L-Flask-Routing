@@ -14,7 +14,6 @@
     <ul class="nav navbar-nav">
       <li><a href={{url_for('home_page')}}>Home</a></li>
       <li><a href={{url_for('store_page')}}>Store</a></li>
-      <li class="active"><a href={{url_for('cart_page')}}>Cart</a></li>
       <li><a href={{url_for('about_page')}}>About</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
@@ -28,7 +27,7 @@
 <form action="/cart_page" method="GET">
 	<img src={{p}} style="width:20%">
   		<h1>{{n}}</h1>
-  		<p class="price">{{p}}$</p>
+  		<p class="price">{{pr}}$</p>
   		<p>{{d}}</p>
 </form>
 
